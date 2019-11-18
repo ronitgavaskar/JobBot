@@ -166,7 +166,7 @@ app.get("/profile", (req, res) => {
   let token = req.query["verify_token"];
   let mode = req.query["mode"];
 
-  if (!config.webhookUrl.startsWith("https://frozen-river-55316.herokuapp.com")) {
+  if (!config.webhookUrl.startsWith("https://")) {
     res.status(200).send("ERROR - Need a proper API_URL in the .env file");
   }
   var Profile = require("./services/profile.js");
